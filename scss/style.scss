@@ -1,1 +1,94 @@
-$main-bg: #E6F0FF;
+// fonts
+
+$fonts: (
+    "black": "../fonts/Poppins-Black.ttf",
+    "bold": "../fonts/Poppins-Bold.ttf",
+    "extraBold": "../fonts/Poppins-ExtraBold.ttf",
+    "light": "../fonts/Poppins-Light.ttf",
+    "medium": "../fonts/Poppins-Medium.ttf",
+    "regular": "../fonts/Poppins-Regular.ttf",
+    "semiBold": "../fonts/Poppins-SemiBold.ttf",
+    "thin": "../fonts/Poppins-Thin.ttf",
+);
+
+@each $name, $link in $fonts {
+    @font-face {
+        font-family: $name;
+        src: url("#{$link}") format("truetype");
+    }
+    .font-#{$name} {
+        font-family: $name;
+    }
+}
+
+// variable
+$main-bg: #e6f0ff;
+$btn-bg: #0f1b4c;
+$text: #687690;
+$text-bold: #000336;
+$link-blue: #44a7ff;
+$section-sky: #e6f0ff;
+$star-color: #ffca56;
+
+
+
+// color class
+.btn-bg {
+    background-color: $btn-bg;
+}
+.para {
+    font-size: 1.1rem;
+    color: $text;
+    @extend .font-medium;
+}
+.para_sm {
+    @extend .para;
+    font-size: 0.85rem;
+}
+// ---------------- common style  ---------------------
+//  ---- custom btn -----  
+.cus__btn {
+    @extend .font-medium;
+    text-align: center;
+    color: $btn-bg;
+    font-size: 1rem;
+    text-transform: capitalize;
+    border-radius: 10px;
+    padding: 10px 25px;
+    text-decoration: none;
+    border: 1.5px solid $btn-bg;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        color: white;
+        background-color: $btn-bg;
+    }
+}
+.cus__btn.active {
+    background-color: $btn-bg;
+    color: white;
+    &:hover {
+        background-color: white;
+        color: $btn-bg;
+        border: 1.5px solid $btn-bg;
+    }
+}
+
+// ------ nav link  ------------
+.nav-link {
+    color: $text-bold!important;
+    border-bottom: 2px solid transparent;
+    &:hover {
+        border-bottom: 2px solid #2e2121;
+    }
+}
+.nav-link.active {
+    border-bottom: 2px solid $text-bold;
+}
+
+// main typography 
+
+//  sections 
+
+#home {
+    background-color: $section-sky;
+}

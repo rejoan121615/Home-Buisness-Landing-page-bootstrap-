@@ -1,3 +1,120 @@
+@font-face {
+  font-family: "black";
+  src: url("../fonts/Poppins-Black.ttf") format("truetype");
+}
+.font-black {
+  font-family: "black";
+}
 
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Poppins-Bold.ttf") format("truetype");
+}
+.font-bold {
+  font-family: "bold";
+}
+
+@font-face {
+  font-family: "extraBold";
+  src: url("../fonts/Poppins-ExtraBold.ttf") format("truetype");
+}
+.font-extraBold {
+  font-family: "extraBold";
+}
+
+@font-face {
+  font-family: "light";
+  src: url("../fonts/Poppins-Light.ttf") format("truetype");
+}
+.font-light {
+  font-family: "light";
+}
+
+@font-face {
+  font-family: "medium";
+  src: url("../fonts/Poppins-Medium.ttf") format("truetype");
+}
+.font-medium, .cus__btn, .para, .para_sm {
+  font-family: "medium";
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+.font-regular {
+  font-family: "regular";
+}
+
+@font-face {
+  font-family: "semiBold";
+  src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+}
+.font-semiBold {
+  font-family: "semiBold";
+}
+
+@font-face {
+  font-family: "thin";
+  src: url("../fonts/Poppins-Thin.ttf") format("truetype");
+}
+.font-thin {
+  font-family: "thin";
+}
+
+.btn-bg {
+  background-color: #0f1b4c;
+}
+
+.para, .para_sm {
+  font-size: 1.1rem;
+  color: #687690;
+}
+
+.para_sm {
+  font-size: 0.85rem;
+}
+
+.cus__btn {
+  text-align: center;
+  color: #0f1b4c;
+  font-size: 1rem;
+  text-transform: capitalize;
+  border-radius: 10px;
+  padding: 10px 25px;
+  text-decoration: none;
+  border: 1.5px solid #0f1b4c;
+  transition: all 0.2s ease-in-out;
+}
+.cus__btn:hover {
+  color: white;
+  background-color: #0f1b4c;
+}
+
+.cus__btn.active {
+  background-color: #0f1b4c;
+  color: white;
+}
+.cus__btn.active:hover {
+  background-color: white;
+  color: #0f1b4c;
+  border: 1.5px solid #0f1b4c;
+}
+
+.nav-link {
+  color: #000336 !important;
+  border-bottom: 2px solid transparent;
+}
+.nav-link:hover {
+  border-bottom: 2px solid #2e2121;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #000336;
+}
+
+#home {
+  background-color: #e6f0ff;
+}
 
 /*# sourceMappingURL=style.css.map */
