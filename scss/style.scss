@@ -256,7 +256,38 @@ $fonts: (
 // neighbour hood
 #neighborhood {
     .container {
-        padding-top: 75px;
-        padding-bottom: 75px;
+        padding-top: 150px;
+        padding-bottom: 30px;
+        .img__sec {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-items: flex-start;
+
+            .details__wrap {
+                grid-column: 1/ -1;
+                grid-row: 1/ -1;
+                position: relative;
+                z-index: 500;
+                background-color: white;
+                box-shadow: 2px 2px 5px 0px #484848;
+                justify-self: flex-start;
+                transform: translateY(-65px);
+            }
+            .img__wrap {
+                grid-column: 1/ -1;
+                grid-row: 1/ -1;
+                justify-self: flex-end;
+            }
+        }
+    }
+}
+
+
+// sccore section 
+#score {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
