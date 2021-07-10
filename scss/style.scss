@@ -174,6 +174,16 @@ $fonts: (
         border: 1.5px solid $btn-bg;
     }
 }
+.cus__btn__white {
+    @extend .cus__btn;
+    background-color: white!important;
+    border-color: white!important;
+    color: blue!important;
+    &:hover {
+        background-color: transparent!important;
+        color: white!important;
+    }
+}
 
 // ------ nav link  ------------
 .nav-link {
@@ -200,6 +210,7 @@ $fonts: (
     border-radius: 5px;
     background-color: black;
 }
+
 // --------------------------- sections ----------------------------
 // section style
 .section-space {
@@ -283,11 +294,28 @@ $fonts: (
     }
 }
 
-
-// sccore section 
+// sccore section
 #score {
     .container {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+}
+
+// feature pro[ery design
+#feature__property {
+    .container {
+        padding-top: 140px;
+        .row {
+            background-color: #17275f;
+        }
+
+        #mobile__svg {
+            margin-top: -75px;
+            max-width: 300px;
+            @include resp ($xxl) {
+                margin-top: -125px;
+            }
+        }
     }
 }

@@ -34,7 +34,7 @@
   font-family: "medium";
   src: url("../fonts/Poppins-Medium.ttf") format("truetype");
 }
-.font-medium, .para, .cus__btn, .para-lg, .para-md {
+.font-medium, .para, .cus__btn, .cus__btn__white, .para-lg, .para-md {
   font-family: "medium";
 }
 
@@ -86,12 +86,12 @@
   }
 }
 
-.para, .cus__btn, .para-lg, .para-md {
+.para, .cus__btn, .cus__btn__white, .para-lg, .para-md {
   font-size: 14px;
   color: #687690;
 }
 @media only screen and (min-width: 1400px) {
-  .para, .cus__btn, .para-lg, .para-md {
+  .para, .cus__btn, .cus__btn__white, .para-lg, .para-md {
     font-size: 16px;
   }
 }
@@ -147,7 +147,7 @@
   background-color: #bbe0ffb0;
 }
 
-.cus__btn {
+.cus__btn, .cus__btn__white {
   text-align: center;
   color: #0f1b4c;
   text-transform: capitalize;
@@ -157,19 +157,29 @@
   border: 1.5px solid #0f1b4c;
   transition: all 0.2s ease-in-out;
 }
-.cus__btn:hover {
+.cus__btn:hover, .cus__btn__white:hover {
   color: white;
   background-color: #0f1b4c;
 }
 
-.cus__btn.active {
+.cus__btn.active, .active.cus__btn__white {
   background-color: #0f1b4c;
   color: white;
 }
-.cus__btn.active:hover {
+.cus__btn.active:hover, .active.cus__btn__white:hover {
   background-color: transparent;
   color: #0f1b4c;
   border: 1.5px solid #0f1b4c;
+}
+
+.cus__btn__white {
+  background-color: white !important;
+  border-color: white !important;
+  color: blue !important;
+}
+.cus__btn__white:hover {
+  background-color: transparent !important;
+  color: white !important;
 }
 
 .nav-link {
@@ -287,6 +297,22 @@
 #score .container {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+#feature__property .container {
+  padding-top: 140px;
+}
+#feature__property .container .row {
+  background-color: #17275f;
+}
+#feature__property .container #mobile__svg {
+  margin-top: -75px;
+  max-width: 300px;
+}
+@media only screen and (min-width: 1400px) {
+  #feature__property .container #mobile__svg {
+    margin-top: -125px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
