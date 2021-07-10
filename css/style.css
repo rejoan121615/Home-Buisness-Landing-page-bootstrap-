@@ -50,7 +50,7 @@
   font-family: "semiBold";
   src: url("../fonts/Poppins-SemiBold.ttf") format("truetype");
 }
-.font-semiBold, .sec-heading {
+.font-semiBold, .item-title, .sec-heading {
   font-family: "semiBold";
 }
 
@@ -133,6 +133,20 @@
   }
 }
 
+.item-title {
+  font-size: 20px;
+  color: #000339;
+}
+@media only screen and (min-width: 1400px) {
+  .item-title {
+    font-size: 22px;
+  }
+}
+
+.section-sky {
+  background-color: #bbe0ffb0;
+}
+
 .cus__btn {
   text-align: center;
   color: #0f1b4c;
@@ -168,6 +182,21 @@
 
 .nav-link.active {
   border-bottom: 2px solid #000336;
+}
+
+.b-r {
+  border-radius: 15px;
+}
+
+.list-none {
+  list-style: none;
+}
+
+.black-border {
+  width: 100px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: black;
 }
 
 .section-space {
@@ -216,6 +245,22 @@
   #main .spacing .highlight__img {
     width: 120% !important;
   }
+}
+
+#feature .container {
+  padding-top: 125px;
+  padding-bottom: 75px;
+}
+#feature .card__container {
+  padding-bottom: 75px;
+}
+#feature .card__container i {
+  font-size: 20px;
+}
+
+#neighborhood .container {
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */

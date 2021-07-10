@@ -125,17 +125,29 @@ $fonts: (
 .sec-heading {
     @extend .font-semiBold;
     font-size: 30px;
-    @include resp ($lg) {
+    @include resp($lg) {
         font-size: 32x;
     }
-    @include resp ($xl) {
+    @include resp($xl) {
         font-size: 35px;
     }
-    @include resp ($xxl) {
+    @include resp($xxl) {
         font-size: 37px;
     }
 }
 
+.item-title {
+    @extend .font-semiBold;
+    font-size: 20px;
+    color: #000339;
+    @include resp($xxl) {
+        font-size: 22px;
+    }
+}
+
+.section-sky {
+    background-color: $section-sky;
+}
 // ---------------- common style  ---------------------
 //  ---- custom btn -----
 .cus__btn {
@@ -175,6 +187,20 @@ $fonts: (
     border-bottom: 2px solid $text-bold;
 }
 
+.b-r {
+    border-radius: 15px;
+}
+
+.list-none {
+    list-style: none;
+}
+.black-border {
+    width: 100px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: black;
+}
+// --------------------------- sections ----------------------------
 // section style
 .section-space {
     padding-top: 50px;
@@ -185,22 +211,18 @@ $fonts: (
     }
 }
 
-// --------------------------- sections ----------------------------
-
-
-
 // main section
 #main {
     background-color: $section-sky;
     .spacing {
         padding-top: 85px;
         padding-bottom: 55px;
-        @include resp ($lg) {
+        @include resp($lg) {
             padding-bottom: 0px;
         }
         .highlight__img {
             max-width: 400px;
-            @include resp ($md) {
+            @include resp($md) {
                 max-width: 550px;
             }
             @include resp($lg) {
@@ -214,5 +236,27 @@ $fonts: (
                 width: 120% !important;
             }
         }
+    }
+}
+
+// feature properties
+#feature {
+    .container {
+        padding-top: 125px;
+        padding-bottom: 75px;
+    }
+    .card__container {
+        padding-bottom: 75px;
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+// neighbour hood
+#neighborhood {
+    .container {
+        padding-top: 75px;
+        padding-bottom: 75px;
     }
 }
