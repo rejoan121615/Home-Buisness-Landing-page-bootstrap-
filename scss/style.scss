@@ -1,3 +1,18 @@
+// variable
+$main-bg: #e6f0ff;
+$btn-bg: #0f1b4c;
+$text: #687690;
+$text-bold: #000336;
+$link-blue: #44a7ff;
+$section-sky: #bbe0ffb0;
+$star-color: #ffca56;
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 // fonts
 
 $fonts: (
@@ -21,47 +36,112 @@ $fonts: (
     }
 }
 
-// variable
-$main-bg: #e6f0ff;
-$btn-bg: #0f1b4c;
-$text: #687690;
-$text-bold: #000336;
-$link-blue: #44a7ff;
-$section-sky: #bbe0ffb0;
-$star-color: #ffca56;
-
-
-
-// color class
-// .
-.section__sky {
-    background-color: $section-sky;
+// ------------------------------ mixing -------------------------
+@mixin resp($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
 }
-.btn-bg {
-    background-color: $btn-bg;
+// responsive font engine
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
 }
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
+
+    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+        & {
+            font-size: $min-font-size;
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(
+                    #{$min-font-size} + #{strip-unit(
+                            $max-font-size - $min-font-size
+                        )} *
+                        (
+                            (100vw - #{$min-vw}) / #{strip-unit(
+                                    $max-vw - $min-vw
+                                )}
+                        )
+                );
+            }
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
+        }
+    }
+}
+
+// common style
+
+@include resp($lg) {
+    .text-lg-left {
+        text-align: left !important;
+    }
+}
+
+.main__heading {
+    font-size: 2.5rem;
+    @include resp($md) {
+        font-size: 3rem;
+    }
+    @include resp($xl) {
+        font-size: 3.5rem;
+    }
+    @include resp($xxl) {
+        font-size: 4rem;
+    }
+}
+
+// para
 .para {
-    font-size: 1.1rem;
-    color: $text;
     @extend .font-medium;
+    font-size: 14px;
+    color: #687690;
+    @include resp($xxl) {
+        font-size: 16px;
+    }
 }
-.para_sm {
+
+.para-md {
     @extend .para;
-    font-size: 0.85rem;
+    font-size: 16px;
+    @include resp($xxl) {
+        font-size: 18px;
+    }
 }
-.sec__border {
-    background-color: #000336;
-    border-radius: 3px;
-    height: 3px;
-    width: 50px;
+
+.para-lg {
+    @extend .para;
+    font-size: 18px;
+    @include resp($xxl) {
+        font-size: 21px;
+    }
 }
+
+.sec-heading {
+    @extend .font-semiBold;
+    font-size: 30px;
+    @include resp ($lg) {
+        font-size: 32x;
+    }
+    @include resp ($xl) {
+        font-size: 35px;
+    }
+    @include resp ($xxl) {
+        font-size: 37px;
+    }
+}
+
 // ---------------- common style  ---------------------
-//  ---- custom btn -----  
+//  ---- custom btn -----
 .cus__btn {
-    @extend .font-medium;
+    @extend .para;
     text-align: center;
     color: $btn-bg;
-    font-size: 1rem;
     text-transform: capitalize;
     border-radius: 10px;
     padding: 10px 25px;
@@ -85,7 +165,7 @@ $star-color: #ffca56;
 
 // ------ nav link  ------------
 .nav-link {
-    color: $text-bold!important;
+    color: $text-bold !important;
     border-bottom: 2px solid transparent;
     &:hover {
         border-bottom: 2px solid #2e2121;
@@ -95,34 +175,44 @@ $star-color: #ffca56;
     border-bottom: 2px solid $text-bold;
 }
 
-// main typography 
-
-//  sections 
-
-#home {
-    background-color: $section-sky;
+// section style
+.section-space {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include resp($lg) {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
 
-.how__it__cards {
-    .card {
-        svg {
-            width: 50px;
+// --------------------------- sections ----------------------------
+
+
+
+// main section
+#main {
+    background-color: $section-sky;
+    .spacing {
+        padding-top: 85px;
+        padding-bottom: 55px;
+        @include resp ($lg) {
+            padding-bottom: 0px;
+        }
+        .highlight__img {
+            max-width: 400px;
+            @include resp ($md) {
+                max-width: 550px;
+            }
+            @include resp($lg) {
+                width: 105% !important;
+                max-width: initial;
+            }
+            @include resp(1600px) {
+                width: 110% !important;
+            }
+            @include resp(1850px) {
+                width: 120% !important;
+            }
         }
     }
-}
-
-
-// list style 
-.list__none {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    i {
-        font-size: 25px;
-    }
-}
-
-// feature properties 
-#feature__properties {
-    background-color: $section-sky;
 }
