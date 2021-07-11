@@ -42,38 +42,6 @@ $fonts: (
         @content;
     }
 }
-// responsive font engine
-@function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-font-size);
-    $u4: unit($max-font-size);
-
-    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-        & {
-            font-size: $min-font-size;
-            @media screen and (min-width: $min-vw) {
-                font-size: calc(
-                    #{$min-font-size} + #{strip-unit(
-                            $max-font-size - $min-font-size
-                        )} *
-                        (
-                            (100vw - #{$min-vw}) / #{strip-unit(
-                                    $max-vw - $min-vw
-                                )}
-                        )
-                );
-            }
-            @media screen and (min-width: $max-vw) {
-                font-size: $max-font-size;
-            }
-        }
-    }
-}
 
 // common style
 
@@ -93,6 +61,17 @@ $fonts: (
     }
     @include resp($xxl) {
         font-size: 4rem;
+    }
+}
+
+.list__heading {
+    text-transform: capitalize;
+    font-size: 20px;
+    @include resp($xxl) {
+        font-size: 23px;
+    }
+    li {
+        @extend .para;
     }
 }
 
@@ -224,7 +203,6 @@ $fonts: (
 
 // main section
 #main {
-    background-color: $section-sky;
     .spacing {
         padding-top: 85px;
         padding-bottom: 55px;
@@ -315,6 +293,45 @@ $fonts: (
             max-width: 300px;
             @include resp ($xxl) {
                 margin-top: -125px;
+            }
+        }
+    }
+}
+
+// ---------- footer section ---------- 
+#footer {
+    .container {
+        padding-top: 50px;
+        @include resp ($lg) {
+            padding-top: 80px;
+        }
+        @include resp ($xl) {
+            padding-top: 110px;
+        }
+        .list__container {
+            h4 {
+                text-align: center;
+                @include resp ($md) {
+                    text-align: left;
+                }
+            }
+            .text-md-left {
+                @include resp ($md) {
+                    text-align: left!important;
+                }
+            }
+            ul {
+                padding-left: 0;
+                list-style: none;
+                li {
+                    text-align: center;
+                    a {
+                        text-align: center;
+                    }
+                    @include resp ($md) {
+                        text-align: left;
+                    }
+                }
             }
         }
     }

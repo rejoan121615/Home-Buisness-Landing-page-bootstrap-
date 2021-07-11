@@ -34,7 +34,7 @@
   font-family: "medium";
   src: url("../fonts/Poppins-Medium.ttf") format("truetype");
 }
-.font-medium, .para, .cus__btn, .cus__btn__white, .para-lg, .para-md {
+.font-medium, .para, .cus__btn, .cus__btn__white, .para-lg, .para-md, .list__heading li {
   font-family: "medium";
 }
 
@@ -86,12 +86,21 @@
   }
 }
 
-.para, .cus__btn, .cus__btn__white, .para-lg, .para-md {
+.list__heading {
+  text-transform: capitalize;
+  font-size: 20px;
+}
+@media only screen and (min-width: 1400px) {
+  .list__heading {
+    font-size: 23px;
+  }
+}
+.para, .cus__btn, .cus__btn__white, .para-lg, .para-md, .list__heading li {
   font-size: 14px;
   color: #687690;
 }
 @media only screen and (min-width: 1400px) {
-  .para, .cus__btn, .cus__btn__white, .para-lg, .para-md {
+  .para, .cus__btn, .cus__btn__white, .para-lg, .para-md, .list__heading li {
     font-size: 16px;
   }
 }
@@ -220,9 +229,6 @@
   }
 }
 
-#main {
-  background-color: #bbe0ffb0;
-}
 #main .spacing {
   padding-top: 85px;
   padding-bottom: 55px;
@@ -312,6 +318,48 @@
 @media only screen and (min-width: 1400px) {
   #feature__property .container #mobile__svg {
     margin-top: -125px;
+  }
+}
+
+#footer .container {
+  padding-top: 50px;
+}
+@media only screen and (min-width: 992px) {
+  #footer .container {
+    padding-top: 80px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #footer .container {
+    padding-top: 110px;
+  }
+}
+#footer .container .list__container h4 {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  #footer .container .list__container h4 {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #footer .container .list__container .text-md-left {
+    text-align: left !important;
+  }
+}
+#footer .container .list__container ul {
+  padding-left: 0;
+  list-style: none;
+}
+#footer .container .list__container ul li {
+  text-align: center;
+}
+#footer .container .list__container ul li a {
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  #footer .container .list__container ul li {
+    text-align: left;
   }
 }
 

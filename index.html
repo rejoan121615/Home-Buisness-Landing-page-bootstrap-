@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
-        <section id="home">
+        <section id="home" class="section-sky">
             <!-- -------------------------- nav bar start ---------------------------- -->
             <nav class="navbar navbar-expand-lg navbar-light py-4 py-lg-5">
                 <div class="container">
@@ -885,7 +885,7 @@
                 <div class="card__container row justify-content-lg-between justify-content-center mt-5 ">
                     <!-- cards  -->
                     <div class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
-                        <div class="card b-r overflow-hidden">
+                        <div class="card b-r overflow-hidden border-0">
                             <img class="card-img-top" src="./img/house_list/house-1.jpg" alt="House Image" />
                             <div class="card-body">
                                 <h5 class="card-title item-title mt-3">$35000</h5>
@@ -911,7 +911,7 @@
                     </div>                    
                     <!-- cards  -->
                     <div class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
-                        <div class="card b-r overflow-hidden">
+                        <div class="card b-r overflow-hidden border-0">
                             <img class="card-img-top" src="./img/house_list/house-2.jpg" alt="House Image" />
                             <div class="card-body">
                                 <h5 class="card-title item-title mt-3">$35000</h5>
@@ -937,7 +937,7 @@
                     </div>                    
                     <!-- cards  -->
                     <div class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
-                        <div class="card b-r overflow-hidden">
+                        <div class="card b-r overflow-hidden border-0">
                             <img class="card-img-top" src="./img/house_list/house-3.jpg" alt="House Image" />
                            <div class="card-body">
                                 <h5 class="card-title item-title mt-3">$35000</h5>
@@ -1070,56 +1070,55 @@
         <!-- footer section  -->
         <footer id="footer">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h4>products</h4>
+                <div class="row list__container">
+                    <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+                        <h4 class="list__heading">products</h4>
                         <ul>
-                            <li><a href="">listing</a></li>
-                            <li><a href="">property</a></li>
-                            <li><a href="">agencies</a></li>
-                            <li><a href="">blog</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">listing</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">property</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">agencies</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">blog</a></li>
                         </ul>
                     </div>
-                    <div class="col">
-                        <h4>products</h4>
+                    <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+                        <h4 class="list__heading">resources</h4>
                         <ul>
-                            <li><a href="">our homes</a></li>
-                            <li><a href="">member stories</a></li>
-                            <li><a href="">video</a></li>
-                            <li><a href="">free trial</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">our homes</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">member stories</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">video</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">free trial</a></li>
                         </ul>
                     </div>
-                    <div class="col">
-                        <h4>products</h4>
+                    <div class="col-12 col-sm-6 col-md-3 mb-4 mb-sm-0">
+                        <h4 class="list__heading">company</h4>
                         <ul>
-                            <li><a href="">partnership</a></li>
-                            <li><a href="">terms of use</a></li>
-                            <li><a href="">privacy</a></li>
-                            <li><a href="">sitemap</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">partnerships</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">terms of use</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">privacy</a></li>
+                            <li><a href="" class="para text-decoration-none text-capitalize">sitemap</a></li>
                         </ul>
                     </div>
-                    <div class="col">
-                        <h4>products</h4>
-                        <ul>
-                            <li>
-                                <p class="para">
-                                    you will find your next home in any style
-                                    you preferred
-                                </p>
-                            </li>
-                            <li>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </li>
-                        </ul>
+                    <div class="col-12 col-sm-6 col-md-3 text-center text-md-left">
+                        <h4 class="list__heading">products</h4>
+                        <p class="para text-md-left">You will find your future home in any style you freffered</p>
+                        <div class="social__bar d-inline-block">
+                            <a href="" class="text-decoration-none text-dark">
+                                <i class="fab fa-facebook-square fa-2x"></i>
+                            </a>
+                            <a href="" class="text-decoration-none text-dark">
+                                <i class="fab fa-linkedin fa-2x"></i>
+                            </a>
+                            <a href="" class="text-decoration-none text-dark">
+                                <i class="fab fa-twitter-square fa-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- footer brand  -->
-            <div class="container">
-                <h5 class="text-black">basnik</h5>
-                <p class="para">Free download from dribble</p>
+            <div class="container pt-5 pb-4 d-flex align-items-center justify-content-between">
+                <h1 class="text-black mb-0">Basnik</h1>
+                <p class="para mb-0">Free download from dribble</p>
             </div>
         </footer>
         <!-- js file  -->
