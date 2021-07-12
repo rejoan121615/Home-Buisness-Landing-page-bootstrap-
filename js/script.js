@@ -10,3 +10,13 @@ navlink.forEach((item, index) => {
         item.classList.add('active');
     })
 })
+
+// smooth scroll effect 
+
+let scrollOptions = {
+    'damping': 0.08
+}
+
+
+let Scrollbar = window.Scrollbar;
+Scrollbar.init(document.querySelector('body'), scrollOptions);
