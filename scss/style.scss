@@ -210,6 +210,7 @@ $fonts: (
         padding-bottom: 55px;
         @include resp($lg) {
             padding-bottom: 0px;
+            padding-top: 0px;
         }
         .highlight__img {
             max-width: 400px;
@@ -217,14 +218,14 @@ $fonts: (
                 max-width: 550px;
             }
             @include resp($lg) {
-                width: 105% !important;
+                width: 90% !important;
                 max-width: initial;
             }
             @include resp(1600px) {
-                width: 110% !important;
+                width: 95% !important;
             }
             @include resp(1850px) {
-                width: 120% !important;
+                width: 100% !important;
             }
         }
     }
