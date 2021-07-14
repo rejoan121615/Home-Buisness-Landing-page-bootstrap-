@@ -1,3 +1,24 @@
+// animate on scroll effect
+AOS.init({
+    once: true,
+    mirror: true,
+});
+
+document.addEventListener("aos:in", ({ detail }) => {
+    console.log("animated in", detail);
+});
+
+document.addEventListener("aos:out", ({ detail }) => {
+    console.log("animated out", detail);
+});
+  
+// aos extra staff 
+document
+    .querySelector("#neighborhood")
+    .addEventListener("aos:in", ({ details }) => {
+        console.log("animate in", details);
+    });
+
 // navbar selector
 const navlink = document.querySelectorAll(".navbar-nav .nav-link");
 
@@ -100,21 +121,5 @@ gsap.timeline().to("body", {
             },
         },
         "-=1"
-    )
-    // gsap.fromTo(
-    //     "#how__it__works .container .clearfix",
-    //     {
-    //         y: 200,
-    //         opacity: 0,
-    //     },
-    //     {
-    //         y: 0,
-    //         opacity: 1,
-    //         duration: 1,
-    //         delay: 1,
-    //         scrollTrigger: {
-    //             trigger: "#how__it__works",
-    //             markers: true,
-    //         }
-    //     }
-    // );
+)
+

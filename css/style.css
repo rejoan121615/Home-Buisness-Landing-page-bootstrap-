@@ -293,7 +293,6 @@
   background-color: white;
   box-shadow: 2px 2px 5px 0px #484848;
   justify-self: flex-start;
-  transform: translateY(-65px);
 }
 #neighborhood .container .img__sec .img__wrap {
   grid-column: 1/-1;
@@ -368,6 +367,25 @@ body {
   width: 100%;
   height: 100vh;
   overflow: auto;
+  scroll-behavior: smooth;
+}
+
+[data-aos=x-fade-right] {
+  opacity: 0;
+  transform: translateX(1000) translateY(1000);
+  transition-property: transform, opacity;
+}
+[data-aos=x-fade-right].aos-animate {
+  opacity: 1;
+  transform: translateX(0) translateY(-65px);
+}
+
+[data-aos=width-full] {
+  width: 0;
+  transition-property: width;
+}
+[data-aos=width-full].aos-animate {
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

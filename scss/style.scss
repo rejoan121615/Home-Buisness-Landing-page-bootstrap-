@@ -264,7 +264,7 @@ $fonts: (
                 background-color: white;
                 box-shadow: 2px 2px 5px 0px #484848;
                 justify-self: flex-start;
-                transform: translateY(-65px);
+                // transform: translateY(-65px);
             }
             .img__wrap {
                 grid-column: 1/ -1;
@@ -347,4 +347,24 @@ body {
     height: 100vh;
     overflow: auto;
     scroll-behavior: smooth;
+}
+
+
+// aos animation 
+[data-aos="x-fade-right"] {
+    opacity: 0;
+    transform: translateX(1000) translateY(1000);
+    transition-property: transform, opacity;
+    &.aos-animate {
+        opacity: 1;
+        transform: translateX(0) translateY(-65px);
+    }
+}
+
+[data-aos="width-full"] {
+    width: 0;
+    transition-property: width;
+    &.aos-animate {
+        width: 100px;
+    }
 }

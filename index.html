@@ -6,13 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="./css/bootstrap.min.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-        />
         <link rel="stylesheet" href="./css/bootstrapCustom.width.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./css/style.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <section id="home" class="section-sky">
@@ -515,7 +512,7 @@
         <section id="how__it__works">
             <div class="container py-3 py-xl-5 mt-lg-5">
                 <!-- intor  -->
-                <div class="clearfix">
+                <div class="clearfix" data-aos="fade-up">
                     <div class="float-start">
                         <svg
                             width="107"
@@ -627,22 +624,22 @@
                 </div>
                 <!-- brands  -->
                 <div class="row brands justify-content-between mt-5">
-                    <div class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
+                    <div data-aos="fade-up" data-aos-delay="800" class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
                         <img src="./img/brands/amazon.png" alt="amazon img" />
                     </div>
-                    <div class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
+                    <div data-aos="fade-up" data-aos-delay="400" class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
                         <img src="./img/brands/meudies.png" alt="meudies img" />
                     </div>
-                    <div class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
+                    <div data-aos="fade-up" data-aos-delay="100" class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
                         <img
                             src="./img/brands/sitepoint.png"
                             alt="sitepoint img"
                         />
                     </div>
-                    <div class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
+                    <div data-aos="fade-up" data-aos-delay="400" class="col-6 col-lg-2 text-center mb-4 mb-lg-0">
                         <img src="./img/brands/slack.png" alt="slack img" />
                     </div>
-                    <div class="col-6 col-lg-2 text-center ">
+                    <div data-aos="fade-up" data-aos-delay="800" class="col-6 col-lg-2 text-center ">
                         <img
                             src="./img/brands/woocommerce.png"
                             alt="woocommerce img"
@@ -655,13 +652,13 @@
                 <div class="how__works__text mt-4">
                     <div class="sec__text__head">
                         <div class="black-border mx-auto mb-3"></div>
-                        <h3 class="text-center sec-heading mb-4">
+                        <h3 data-aos="fade-up" data-aos-delay="100" class="text-center sec-heading mb-4">
                             How its works ?
                         </h3>
-                        <p class="text-center para-md">
+                        <p data-aos="fade-up" data-aos-delay="250" class="text-center para-md">
                             Everything you need to know when you're looking to buy,
                         </p>
-                        <p class="text-center para-md">
+                        <p data-aos="fade-up" data-aos-delay="400" class="text-center para-md">
                             rent, or sell - all in one place.
                         </p>
                     </div>
@@ -670,6 +667,7 @@
                     class="row w-lg-75 mx-auto mt-5 justify-content-center w-lg-90 w-xl-80 w-xxl-70">
                     <!-- card one  -->
                     <div
+                        data-aos="fade-right"
                         class="
                             card
                             py-4 py-xl-5
@@ -734,6 +732,7 @@
                     </div>
                     <!-- card one  -->
                     <div
+                        data-aos="fade-down"
                         class="
                             card
                             py-4 py-xl-5
@@ -778,6 +777,7 @@
                     </div>
                     <!-- card one  -->
                     <div
+                        data-aos="fade-right"
                         class="
                             card
                             py-4 py-xl-5
@@ -841,7 +841,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="btn__container w-100 text-center">
+                <div data-aos="fade-up" class="btn__container w-100 text-center">
                     <a href="" class="cus__btn active d-inline-block"
                         >sell full guidelines <i class="bi bi-three-dots"></i
                     ></a>
@@ -853,7 +853,7 @@
             <div class="container section-space">
                 <!-- control panel  -->
                 <div class="row justify-content-between">
-                    <div class="col-12 col-sm-6">
+                    <div data-aos="fade-right" class="col-12 col-sm-6">
                         <h3 class="font-semiBold h1 text-capitalize">
                             feature properties
                         </h3>
@@ -862,6 +862,7 @@
                         </p>
                     </div>
                     <div
+                        data-aos="fade-left"
                         class="
                             col-12 col-sm-6
                             align-self-end
@@ -886,7 +887,7 @@
                 <div class="card__container row justify-content-lg-between justify-content-center mt-5 ">
                     <!-- cards  -->
                     <div class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
-                        <div class="card b-r overflow-hidden border-0">
+                        <div data-aos="flip-right" data-aos-duration="2000" class="card b-r overflow-hidden border-0">
                             <img class="card-img-top" src="./img/house_list/house-1.jpg" alt="House Image" />
                             <div class="card-body">
                                 <h5 class="card-title item-title mt-3">$35000</h5>
@@ -911,7 +912,7 @@
                         </div>
                     </div>                    
                     <!-- cards  -->
-                    <div class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
+                    <div data-aos="flip-right" data-aos-duration="2000" class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
                         <div class="card b-r overflow-hidden border-0">
                             <img class="card-img-top" src="./img/house_list/house-2.jpg" alt="House Image" />
                             <div class="card-body">
@@ -937,7 +938,7 @@
                         </div>
                     </div>                    
                     <!-- cards  -->
-                    <div class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
+                    <div data-aos="flip-right" data-aos-duration="2000" class="col-12 col-sm-10 col-lg-4 mb-4 mb-lg-0">
                         <div class="card b-r overflow-hidden border-0">
                             <img class="card-img-top" src="./img/house_list/house-3.jpg" alt="House Image" />
                            <div class="card-body">
@@ -970,7 +971,7 @@
                 <div class="row align-items-center justify-content-lg-between">
                     <!-- image section  -->
                     <div class="img__sec col-12 col-lg-6">
-                        <div class="details__wrap w-xs-45 p-4 b-r border">
+                        <div data-aos="x-fade-right" data-aos-duration="1000" class="details__wrap w-xs-45 p-4 b-r border">
                             <div class="texts">
                                 <div>
                                     <h3 class="text-primary">40,000+</h3> <i class="text-danger">trade point</i>
@@ -983,24 +984,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="img__wrap w-xs-80 b-r overflow-hidden">
+                        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50" class="img__wrap w-xs-80 b-r overflow-hidden">
                             <img class="w-100" src="./img/house.jpg" alt="house image" />
                         </div>
                     </div>
                     <!-- texts section  -->
                     <div class="col-12 col-lg-5 col-xl-4 mt-5">
                         <div class="sec__text__head">
-                            <div class="black-border mb-3 mx-auto mx-lg-0"></div>
-                            <h3 class="sec-heading text-center text-lg-left">
+                            <div data-aos="width-full" data-aos-duration="1000" data-aos-delay="50" class="black-border mb-3 mx-auto mx-lg-0"></div>
+                            <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="sec-heading text-center text-lg-left">
                                 You’ve found a
                             </h3>
-                            <h3 class="sec-heading text-center text-lg-left">
+                            <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" class="sec-heading text-center text-lg-left">
                                 neighborhood
                             </h3>
-                            <h3 class="sec-heading mb-4 text-center text-lg-left">
+                            <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" class="sec-heading mb-4 text-center text-lg-left">
                                you love.
                             </h3>
-                            <p class="text-center para-md text-lg-left text-center">
+                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100" class="text-center para-md text-lg-left text-center">
                                 When you own a home, you’re committing to living in one location for a while. In a recent Trulia survey, we found that five out of six respondents said finding the right neighborhood 
                             </p>
                         </div>
@@ -1128,6 +1129,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./js/gsap.min.js"></script>
         <script src="./js/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="./js/script.js"></script>
     </body>
 </html>
