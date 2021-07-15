@@ -155,12 +155,12 @@ $fonts: (
 }
 .cus__btn__white {
     @extend .cus__btn;
-    background-color: white!important;
-    border-color: white!important;
-    color: blue!important;
+    background-color: white !important;
+    border-color: white !important;
+    color: blue !important;
     &:hover {
-        background-color: transparent!important;
-        color: white!important;
+        background-color: transparent !important;
+        color: white !important;
     }
 }
 
@@ -200,8 +200,6 @@ $fonts: (
         padding-bottom: 75px;
     }
 }
-
-
 
 // main section
 #main {
@@ -294,33 +292,33 @@ $fonts: (
         #mobile__svg {
             margin-top: -75px;
             max-width: 300px;
-            @include resp ($xxl) {
+            @include resp($xxl) {
                 margin-top: -125px;
             }
         }
     }
 }
 
-// ---------- footer section ---------- 
+// ---------- footer section ----------
 #footer {
     .container {
         padding-top: 50px;
-        @include resp ($lg) {
+        @include resp($lg) {
             padding-top: 80px;
         }
-        @include resp ($xl) {
+        @include resp($xl) {
             padding-top: 110px;
         }
         .list__container {
             h4 {
                 text-align: center;
-                @include resp ($md) {
+                @include resp($md) {
                     text-align: left;
                 }
             }
             .text-md-left {
-                @include resp ($md) {
-                    text-align: left!important;
+                @include resp($md) {
+                    text-align: left !important;
                 }
             }
             ul {
@@ -331,7 +329,7 @@ $fonts: (
                     a {
                         text-align: center;
                     }
-                    @include resp ($md) {
+                    @include resp($md) {
                         text-align: left;
                     }
                 }
@@ -340,17 +338,16 @@ $fonts: (
     }
 }
 
-
-// smooth scroll effect 
+// smooth scroll effect
 body {
     width: 100%;
     height: 100vh;
     overflow: auto;
     scroll-behavior: smooth;
+    opacity: 0;
 }
 
-
-// aos animation 
+// aos animation
 [data-aos="x-fade-right"] {
     opacity: 0;
     transform: translateX(1000) translateY(1000);

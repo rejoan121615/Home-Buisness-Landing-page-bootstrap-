@@ -42,9 +42,6 @@ ScrollTrigger.scrollerProxy("body", {
 
 scrollbar.addListener(ScrollTrigger.update);
 
-
-
-
 [].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
     scrollbar.addListener(() => {
         if (scrollbar.isVisible(el)) {
@@ -54,11 +51,6 @@ scrollbar.addListener(ScrollTrigger.update);
 });
 
 // timeline define
-
-
-gsap.set("body", {
-    opacity: 0,
-});
 
 gsap.timeline()
     .to("body", {
@@ -110,21 +102,20 @@ gsap.timeline()
             },
         },
         "-=1"
-    )
-    gsap.from("#mobile__svg path", {
-        x: function () {
-            return gsap.utils.random(-500, 500);
-        },
-        y: function () {
-            return gsap.utils.random(-500, 500);
-        },
-        delay: 1.2,
-        opacity: 0,
-        stagger: {
-            amount: 4,
-        },
-        scrollTrigger: {
-            trigger: "#feature__property",
-        },
-    });
-
+    );
+gsap.from("#mobile__svg path", {
+    x: function () {
+        return gsap.utils.random(-500, 500);
+    },
+    y: function () {
+        return gsap.utils.random(-500, 500);
+    },
+    delay: 1.2,
+    opacity: 0,
+    stagger: {
+        amount: 4,
+    },
+    scrollTrigger: {
+        trigger: "#feature__property",
+    },
+});

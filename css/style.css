@@ -368,6 +368,7 @@ body {
   height: 100vh;
   overflow: auto;
   scroll-behavior: smooth;
+  opacity: 0;
 }
 
 [data-aos=x-fade-right] {
