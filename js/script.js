@@ -1,23 +1,7 @@
 // animate on scroll effect
-AOS.init({
-    once: true,
-    mirror: true,
-});
+AOS.init();
 
-document.addEventListener("aos:in", ({ detail }) => {
-    console.log("animated in", detail);
-});
-
-document.addEventListener("aos:out", ({ detail }) => {
-    console.log("animated out", detail);
-});
-  
-// aos extra staff 
-document
-    .querySelector("#neighborhood")
-    .addEventListener("aos:in", ({ details }) => {
-        console.log("animate in", details);
-    });
+// aos extra staff
 
 // navbar selector
 const navlink = document.querySelectorAll(".navbar-nav .nav-link");
@@ -32,50 +16,55 @@ navlink.forEach((item, index) => {
     });
 });
 
-// register scroll plugins 
+// register scroll plugins
 
+// var Scrollbar = window.Scrollbar;
 
-// smooth scroll effect
+const scrollbar = Scrollbar.init(document.querySelector("body"), {
+    damping: 0.1,
+    delegateTo: document,
+});
 
-// let Scrollbar = window.Scrollbar;
-// const bodyScrollBar = Scrollbar.init(document.querySelector("body"), {
-//     damping: 0.08
-// });
+scrollbar.setPosition(0, 0);
+// scrollbar.track.yAxis.element.remove()
+scrollbar.track.xAxis.element.remove();
 
-// bodyScrollBar.setPosition(0, 0);
-// bodyScrollBar.track.xAxis.element.remove();
-
-// gsap animation
-
-// register smooth scroll 
-// ScrollTrigger.scrollerProxy(document.body, {
-//     scrollTop (value) {
-//         console.log('value', value)
-//         if (arguments.length) {
-//             bodyScrollBar.scrollTop = value;
-//         }
-//         return bodyScrollBar.scrollTop;
-//     },
-//     getBoundingClientRect() {
-//         return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight}
-//     }
-// })
-
-// bodyScrollBar.containerEl.addEventListener()
-// bodyScrollBar.addListener(ScrollTrigger.update)
-// console.log(bodyScrollBar)
-
-// timeline define 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set('body', {
-    opacity: 0,
-})
+ScrollTrigger.scrollerProxy("body", {
+    scrollTop(value) {
+        if (arguments.length) {
+            scrollbar.scrollTop = value;
+        }
+        return scrollbar.scrollTop;
+    },
+});
 
-gsap.timeline().to("body", {
-    opacity: 1,
-    delay: 0.3,
-})
+scrollbar.addListener(ScrollTrigger.update);
+
+
+
+
+[].forEach.call(document.querySelectorAll("[data-aos]"), (el) => {
+    scrollbar.addListener(() => {
+        if (scrollbar.isVisible(el)) {
+            el.classList.add("aos-animate");
+        }
+    });
+});
+
+// timeline define
+
+
+gsap.set("body", {
+    opacity: 0,
+});
+
+gsap.timeline()
+    .to("body", {
+        opacity: 1,
+        delay: 0.3,
+    })
     .from(
         ".navbar",
         {
@@ -121,5 +110,21 @@ gsap.timeline().to("body", {
             },
         },
         "-=1"
-)
+    )
+    gsap.from("#mobile__svg path", {
+        x: function () {
+            return gsap.utils.random(-500, 500);
+        },
+        y: function () {
+            return gsap.utils.random(-500, 500);
+        },
+        delay: 1.2,
+        opacity: 0,
+        stagger: {
+            amount: 4,
+        },
+        scrollTrigger: {
+            trigger: "#feature__property",
+        },
+    });
 
